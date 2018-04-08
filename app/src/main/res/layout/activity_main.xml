@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="https://mail.ru/"
+        android:inputType="text"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="92dp"
+            android:layout_marginStart="2dp"
+            android:onClick="connect"
+            android:text="connect" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="92dp"
+            android:layout_marginStart="102dp"
+            android:onClick="clear"
+            android:text="clear" />
+
+    </RelativeLayout>
+
+
+    <WebView
+        android:id="@+id/vwContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="HTML Page"
+            android:textAlignment="center" />
+    </ScrollView>
+
+
+</LinearLayout>
